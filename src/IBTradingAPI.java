@@ -109,14 +109,14 @@ public class IBTradingAPI extends JFrame implements EWrapper
         
         if(m_client_simulation.isConnected() == false)
         {
-        	m_client_simulation.eConnect(null, 7496, 0);
+        	m_client_simulation.eConnect(null, 7496, 0);	// FIXME: This port number is specific to your account
             if (m_client_simulation.isConnected()) {
                 System.out.println("Connected to the TWS server, simulation!");
             }
         }
         if(m_client.isConnected() == false)
         {
-        	m_client.eConnect(null, 7495, 0);
+        	m_client.eConnect(null, 7495, 0);				// FIXME: This port number is specific to your account
             if (m_client.isConnected()) {
                 System.out.println("Connected to the TWS server!");
             }

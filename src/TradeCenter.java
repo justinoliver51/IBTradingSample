@@ -2,7 +2,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 
 public class TradeCenter 
 {
@@ -18,8 +17,12 @@ public class TradeCenter
 	
 	public TradeCenter()
 	{
-		// Initialize IBTradingAPI
-		
+        // Initialize the trading API connection
+        tradingAPI = new IBTradingAPI();
+        tradingAPI.connect();
+        
+        // Subscribe to updates from my account
+        tradingAPI.initializeAvailableFunds();
 	}
 	
 	public String trade(String symbol)
