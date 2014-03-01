@@ -19,7 +19,7 @@ public class TradeCenter
 	{
         // Initialize the trading API connection
         tradingAPI = new IBTradingAPI();
-        tradingAPI.connect();
+        tradingAPI.connect(); 
         
         // Subscribe to updates from my account
         tradingAPI.initializeAvailableFunds();
